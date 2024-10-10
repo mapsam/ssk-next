@@ -1,0 +1,11 @@
+---
+layout: layouts/base.njk
+---
+
+<main class="content project">
+  {{ content | safe }}
+
+  {%- for img in images -%}
+    {% image img, "test alt" %}
+  {%- endfor -%}
+</main>

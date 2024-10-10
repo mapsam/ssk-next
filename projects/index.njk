@@ -1,0 +1,13 @@
+---
+title: "Projects landing page"
+layout: layouts/default.njk
+---
+
+<p>This is the projects landing page.</p>
+
+{%- for project in collections.projects -%}
+  <div class="project-square">
+    {% featuredimage project.data.featured %}
+    <a href="{{ project.url }}">{{ project.data.title }}</a>
+  </div>
+{%- endfor -%}
