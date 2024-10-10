@@ -1,8 +1,13 @@
 import sharp from 'sharp';
 import Image from '@11ty/eleventy-img';
+import { EleventyHtmlBasePlugin } from '@11ty/eleventy';
 import esbuild from 'esbuild';
 import { writeFile, mkdir } from 'node:fs/promises';
-import { basename } from 'node:path';
+import path from 'node:path';
+
+export const config = {
+	pathPrefix: '/ssk-next',
+}
 
 export default function (conf) {
 	// copy css
@@ -35,9 +40,9 @@ export default function (conf) {
 		const featuredImage = await image.toFormat('jpeg').toBuffer();
 		const placeholder = await image.blur(35).toBuffer();
 		const base64Placeholder = `data:image/png;base64, ${placeholder.toString('base64')}`;
-		const [filename, suffix] = basename(src).split('.');
+		const [filename, suffix] = path.basename(src).split('.');
 		const outputUrl = `./_site/assets/img/${filename}_featured.${suffix}`;
-		const url = `/assets/img/${filename}_featured.${suffix}`
+		const url = path.join(config.pathPrefix, `/assets/img/${filename}_featured.${suffix}`);
 		
 		await mkdir('./_site/assets/img/', { recursive: true });
 		await writeFile(outputUrl, featuredImage);
@@ -66,16 +71,10 @@ export default function (conf) {
 
     const lowestSrc = stats['jpeg'][0];
 
-    const srcset = Object.keys(stats).reduce(
-      (acc, format) => ({
-        ...acc,
-        [format]: stats[format].reduce(
-          (_acc, curr) => `${_acc} ${curr.srcset} ,`,
-          '',
-        ),
-      }),
-      {},
-    );
+		const sourceSet = {};
+		for (let fmt in stats) {
+			sourceSet[fmt] = stats[fmt].map(({ srcset }) => path.resolve(`${config.pathPrefix}${srcset}`)).join(',');
+		}
 
 		const placeholder = await sharp(lowestSrc.outputPath)
 			.resize({ fit: sharp.fit.inside })
@@ -85,7 +84,7 @@ export default function (conf) {
 		const base64Placeholder = `data:image/png;base64, ${placeholder.toString('base64')}`;
     const source = `<source 
 			type="image/webp"
-			data-srcset="${srcset['webp']}"
+			data-srcset="${sourceSet['webp']}"
 			data-sizes="(min-width: 1024px) 1024px, 100vw"
 		>`;
 
@@ -95,11 +94,13 @@ export default function (conf) {
 			src="${base64Placeholder}"
 			data-src="${lowestSrc.url}"
 			data-sizes="(min-width: 1024px) 1024px, 100vw"
-			data-srcset="${srcset['jpeg']}"
+			data-srcset="${sourceSet['jpeg']}"
 			width="${lowestSrc.width}"
 			height="${lowestSrc.height}"
 		>`;
 
     return `<div class="image-wrapper"><picture>${source}${img}</picture></div>`;
 	});
+
+	conf.addPlugin(EleventyHtmlBasePlugin);
 };
