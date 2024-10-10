@@ -1,0 +1,22 @@
+body {
+  margin: 10px;
+  font-family: sans-serif;
+}
+
+.content {
+  margin: auto;
+  max-width: 1024px;
+}
+
+.project img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.project-square {
+  width: 400;
+  display: inline-block;
+}
