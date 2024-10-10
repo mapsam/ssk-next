@@ -1,7 +1,7 @@
 import sharp from 'sharp';
 import Image from '@11ty/eleventy-img';
 import esbuild from 'esbuild';
-import { writeFile } from 'node:fs/promises';
+import { writeFile, mkdir } from 'node:fs/promises';
 import { basename } from 'node:path';
 
 export default function (conf) {
@@ -39,6 +39,7 @@ export default function (conf) {
 		const outputUrl = `./_site/assets/img/${filename}_featured.${suffix}`;
 		const url = `/assets/img/${filename}_featured.${suffix}`
 		
+		await mkdir('./_site/assets/img/', { recursive: true });
 		await writeFile(outputUrl, featuredImage);
 
     const img = `<img
