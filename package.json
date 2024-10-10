@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "build": "eleventy",
-    "dev": "eleventy --serve"
+    "dev": "eleventy --serve",
+    "format": "npx prettier . --write --single-quote"
   },
   "keywords": [],
   "author": "Sam Matthews <matthews.sam@gmail.com> (http://mapsam.com/)",

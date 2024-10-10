@@ -1,6 +1,6 @@
 ---
 layout: layouts/default.njk
-title: "Studio Skaggs Kennedy"
+title: 'Studio Skaggs Kennedy'
 ---
 
 ## Studio Skaggs Kennedy

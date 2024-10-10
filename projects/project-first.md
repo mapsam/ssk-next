@@ -1,12 +1,12 @@
 ---
-title: "Project 1"
+title: 'Project 1'
 layout: layouts/project.njk
 tags: projects
-featured: "./assets/img/pixasquare-4ojhpgKpS68-unsplash.jpg"
+featured: './assets/img/pixasquare-4ojhpgKpS68-unsplash.jpg'
 images:
-  - "./assets/img/pixasquare-4ojhpgKpS68-unsplash.jpg"
-  - "./assets/img/howard-bouchevereau-042Srn0-82o-unsplash.jpg"
-  - "./assets/img/sandro-katalina-sRaRlaFQolw-unsplash.jpg"
+  - './assets/img/pixasquare-4ojhpgKpS68-unsplash.jpg'
+  - './assets/img/howard-bouchevereau-042Srn0-82o-unsplash.jpg'
+  - './assets/img/sandro-katalina-sRaRlaFQolw-unsplash.jpg'
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent purus nulla, pulvinar non varius suscipit, fringilla et sem. Suspendisse id lectus eu ipsum accumsan aliquam et sed ex. Suspendisse ac turpis quam. Aenean mollis ante at eros scelerisque vulputate. Duis porta cursus ante, vel posuere mi. Duis viverra quam a enim ultrices, sit amet efficitur nibh fermentum. Mauris finibus tellus augue, sit amet porta magna ultrices eget.

@@ -1,11 +1,11 @@
 ---
-title: "Project Blueeee"
+title: 'Project Blueeee'
 layout: layouts/project.njk
 tags: projects
 featured: ./assets/img/joel-filipe-nEEa3_4AS10-unsplash.jpg
 images:
-  - ./assets/img/joel-filipe-nEEa3_4AS10-unsplash.jpg 
-  - ./assets/img/simone-hutsch-8FIN2qa2vQM-unsplash.jpg 
+  - ./assets/img/joel-filipe-nEEa3_4AS10-unsplash.jpg
+  - ./assets/img/simone-hutsch-8FIN2qa2vQM-unsplash.jpg
   - ./assets/img/jonathan-gallegos-_vA2q0-NroU-unsplash.jpg
 ---
 

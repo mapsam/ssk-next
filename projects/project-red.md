@@ -1,12 +1,12 @@
 ---
-title: "Project Red"
+title: 'Project Red'
 layout: layouts/project.njk
 tags: projects
-featured: ./assets/img/all-bong-JDN-_FIqB3k-unsplash.jpg 
+featured: ./assets/img/all-bong-JDN-_FIqB3k-unsplash.jpg
 images:
-  - ./assets/img/radoslav-bali-CHZlzzT0C7I-unsplash.jpg 
-  - ./assets/img/all-bong-JDN-_FIqB3k-unsplash.jpg 
-  - ./assets/img/yang-16Y4sHHe9xY-unsplash.jpg 
+  - ./assets/img/radoslav-bali-CHZlzzT0C7I-unsplash.jpg
+  - ./assets/img/all-bong-JDN-_FIqB3k-unsplash.jpg
+  - ./assets/img/yang-16Y4sHHe9xY-unsplash.jpg
   - ./assets/img/howard-bouchevereau-T2QhMK8ysw8-unsplash.jpg
 ---
 
