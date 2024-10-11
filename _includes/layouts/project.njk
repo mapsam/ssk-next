@@ -5,7 +5,15 @@ layout: layouts/base.njk
 <main class="content project">
   {{ content | safe }}
 
-  {%- for img in images -%}
-    {% image img, "test alt" %}
+  <div class="specifications">
+  {%- for spec in specs -%}
+    {% specification spec %}
   {%- endfor -%}
+  </div>
+
+  <div class="project-images">
+    {%- for img in images -%}
+      {% image img, "test alt" %}
+    {%- endfor -%}
+  </div>
 </main>

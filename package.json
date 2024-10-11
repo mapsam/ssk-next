@@ -15,6 +15,7 @@
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-img": "^5.0.0",
+    "@11ty/eleventy-navigation": "^0.3.5",
     "esbuild": "^0.24.0",
     "sharp": "^0.33.5",
     "vanilla-lazyload": "^19.1.3"

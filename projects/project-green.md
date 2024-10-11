@@ -1,7 +1,6 @@
 ---
 title: 'Project 2 Green'
 layout: layouts/project.njk
-tags: projects
 featured: ./assets/img/fabio-3CDMAw6Y4DU-unsplash.jpg
 images:
   - ./assets/img/danist-soh-dqXiw7nCb9Q-unsplash.jpg

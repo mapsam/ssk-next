@@ -1,7 +1,6 @@
 ---
 title: 'Project Red'
 layout: layouts/project.njk
-tags: projects
 featured: ./assets/img/all-bong-JDN-_FIqB3k-unsplash.jpg
 images:
   - ./assets/img/radoslav-bali-CHZlzzT0C7I-unsplash.jpg

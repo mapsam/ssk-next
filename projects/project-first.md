@@ -1,7 +1,6 @@
 ---
 title: 'Project 1'
 layout: layouts/project.njk
-tags: projects
 featured: './assets/img/pixasquare-4ojhpgKpS68-unsplash.jpg'
 images:
   - './assets/img/pixasquare-4ojhpgKpS68-unsplash.jpg'
