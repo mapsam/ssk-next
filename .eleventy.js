@@ -1,5 +1,4 @@
 import { EleventyHtmlBasePlugin } from '@11ty/eleventy';
-import eleventyNavigationPlugin from '@11ty/eleventy-navigation';
 import { featuredImageShortcode } from './lib/shortcode-featured-image.js';
 import { imageShortcode } from './lib/shortcode-image.js';
 import { specificationShortcode } from './lib/shortcode-specification.js';
@@ -13,7 +12,6 @@ export const config = {
 export default function (conf) {
   conf.addPassthroughCopy('assets/css');
   conf.addTemplateFormats('js');
-  conf.addPlugin(eleventyNavigationPlugin);
   conf.addPlugin(EleventyHtmlBasePlugin);
   conf.addCollection('projects', (coll) => coll.getFilteredByGlob('projects/**/*.md'));
   conf.addShortcode('featuredimage', featuredImageShortcode);
