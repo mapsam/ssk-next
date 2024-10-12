@@ -1,6 +1,5 @@
 ---
 title: 'Project Blueeee'
-status: Completed 2022
 layout: layouts/project.njk
 featured: ./assets/img/joel-filipe-nEEa3_4AS10-unsplash.jpg
 images:
@@ -8,6 +7,8 @@ images:
   - ./assets/img/simone-hutsch-8FIN2qa2vQM-unsplash.jpg
   - ./assets/img/jonathan-gallegos-_vA2q0-NroU-unsplash.jpg
 specs:
+  - key: status
+    value: Complete, 2022
   - key: location
     value: "Berkeley, CA"
   - key: size

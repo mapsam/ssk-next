@@ -3,6 +3,11 @@ body {
   font-family: sans-serif;
 }
 
+nav ul, nav li {
+  display: inline-block;
+  text-decoration: none;
+}
+
 .content {
   margin: auto;
   max-width: 1024px;
@@ -15,6 +20,28 @@ body {
   height: auto;
   margin-bottom: 10px;
 }
+.text p:first-of-type {
+  font-size: 1.3em;
+}
+
+.spec {
+  padding: 0.2em 1em; 
+  background-color: #f6f6f6;
+}
+.specification {
+  font-size: 0.9em;
+  margin: 1em auto;
+}
+.specification span {
+  display: block;
+}
+.specification .key {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.7em;
+  margin-bottom: 0.4em;
+}
+
 
 .project-square {
   width: 400;

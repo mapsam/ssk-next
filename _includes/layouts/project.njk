@@ -3,17 +3,19 @@ layout: layouts/base.njk
 ---
 
 <main class="content project">
-  {{ content | safe }}
-
-  <div class="specifications">
-  {%- for spec in specs -%}
-    {% specification spec %}
-  {%- endfor -%}
-  </div>
-
-  <div class="project-images">
-    {%- for img in images -%}
-      {% image img, "test alt" %}
-    {%- endfor -%}
+  <div class="grid">
+    <div class="text">
+      {{ content | safe }}
+    </div>
+    <div class="spec">
+      {%- for spec in specs -%}
+        {% specification spec %}
+      {%- endfor -%}
+    </div>
+    <div class="img">
+      {%- for img in images -%}
+        {% image img, "test alt" %}
+      {%- endfor -%}
+    </div>
   </div>
 </main>
