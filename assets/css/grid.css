@@ -1,0 +1,16 @@
+/* https://grid.layoutit.com/ */
+.grid {  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 1em 1em;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "text text spec"
+    "img img img";
+}
+
+.text { grid-area: text; }
+.spec { grid-area: spec; }
+.img { grid-area: img; }
+
